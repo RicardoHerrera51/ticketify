@@ -41,7 +41,7 @@ function Login() {
   }
 
   if (getToken()) {
-    if (getRoleNames() === ["User"]) {
+    if (getRoleNames() == ["User"]) {
       window.location.href = './';
     } else {
       window.location.href = './event-admin';
