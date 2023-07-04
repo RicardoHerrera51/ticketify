@@ -1,6 +1,14 @@
 import HelpTwoToneIcon from '@mui/icons-material/HelpTwoTone';
+import { useNavigate } from 'react-router-dom';
+
+let navigate = useNavigate()
 
 const Error404 = () => {
+
+    const handleClick = () => {
+        navigate("/home")
+    }
+
     return (
         <div className="flex flex-col justify-center items-center w-screen h-screen bg-violet-500">
             <HelpTwoToneIcon className="m-4 text-danger-red" sx={{ fontSize: 120 }} />
@@ -9,7 +17,7 @@ const Error404 = () => {
             <p className="text-xl font-montserrat font-medium text-center text-danger-red">
                 Algo salió mal. El contenido que buscas no existe.
             </p>
-            <button className="font-montserrat bg-gray-300 m-4 py-2 px-4 rounded">
+            <button className="font-montserrat bg-gray-300 m-4 py-2 px-4 rounded" onClick={handleClick}>
                 Ir al inicio de sesión
             </button>
         </div>
